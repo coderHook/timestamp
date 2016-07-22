@@ -51,5 +51,5 @@ if(url.match(/\b(^\d{1,3})/)){ //Client has entered a unix date
   res.send({'unix': convDateToUnix(url), 'natural': str});}
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log('Server running on port 8080 and https://timestamp-abel1987.c9users.io'.green);
